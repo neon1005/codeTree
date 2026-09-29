@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+bool isPrime(int n) {
+    for (int i = 2; i<n/2+1; i++) {
+        if (n%i == 0)
+            return false;
+    }
+    return true;
+}
+
+int main() {
+    // Please write your code here.
+    int a,b;
+    cin>>a>>b;
+    int sum = 0;
+    for (int i = a; i<=b;i++) {
+        if (isPrime(i))
+            sum = sum + i;
+    }
+    cout<<sum<<endl;
+    return 0;
+}
